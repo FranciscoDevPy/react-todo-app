@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+body{
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-gradiente-azulado{
+  background: linear-gradient(
+      to top, 
+      #1848f0, 
+      #0059e8, 
+      #0069ee, 
+      #0081ef, 
+      #0096eb, 
+      #00a5ed, 
+      #00b2eb, 
+      #00bfe8, 
+      #00cdec, 
+      #00daed, 
+      #00e7eb, 
+      #14f4e6
+  )
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bg-gradiente-dark{
+  background-image: linear-gradient(to right top, #051937, #10233f, #1a2e48, #253950, #314458);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.bg-lila{
+  background-color: #a81dfa;
+}
+
+.txt-white{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-app{
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card{
+  padding: 8px 5px;
+  box-shadow: 0px 5px 6px #2551585b;
+}
+
+.card-header, .card-footer{
+  border: none;
+}
+
+.btn:hover{
+  color: white;
+}
+
+.btn-add{
+  text-align: center;
+  font-size: 16px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.btn-delete{
+  background-color: #d60202cf;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.table-todo-app{
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  font-size: 15px;
+}
+
+.table-todo-app td{
+  position: relative;
+  padding: 8px 5px;
+  background-color: #dce4ec;
+}
+.table-todo-app td:first-child{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.table-todo-app td:last-child{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
