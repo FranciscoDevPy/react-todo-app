@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import TodoApi from "../helpers/todoApi";
+import TodoApi from "../helpers/TodoApi";
 import useFetchTodo from '../hooks/useFetchTodo'
 
 const TodoTable = ( {todo, setTodo, setTodoTotal} ) => 
