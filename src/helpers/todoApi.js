@@ -58,4 +58,4 @@ class TodoApi {
 
 }
 
-module.exports = TodoApi;
+export default TodoApi;
