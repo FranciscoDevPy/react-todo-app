@@ -2,14 +2,14 @@ import {useState} from 'react';
 import './App.css';
 import TodoForm from './Components/TodoForm';
 import TodoTable from './Components/TodoTable';
-import { deleteAllTodo } from "./helpers/todoApi";
+import TodoApi from "./helpers/todoApi";
 
 function App() 
 {
     const [todo, setTodo] = useState([]);
     const [todoTotal, setTodoTotal] = useState(0);
     const handleSubmit = ()=>{
-        deleteAllTodo()
+        TodoApi.deleteAllTodo()
             .then((msg)=>{
                 setTodo([])
             });

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { deleteTodo } from "../helpers/todoApi";
+import TodoApi from "../helpers/todoApi";
 import useFetchTodo from '../hooks/useFetchTodo'
 
 const TodoTable = ( {todo, setTodo, setTodoTotal} ) => 
@@ -11,7 +11,7 @@ const TodoTable = ( {todo, setTodo, setTodoTotal} ) =>
     },[data]);
 
     const handleSubmit = (id)=>{
-        deleteTodo(id)
+        TodoApi.deleteTodo(id)
             .then((todo)=>{
                 setTodo(todo);
             });

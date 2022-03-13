@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { createTodo } from "../helpers/todoApi";
-
+import TodoApi from "../helpers/todoApi";
 const TodoForm = ({setTodo}) => 
 {
     const [inputTodo, setInputTodo] = useState('');
@@ -12,7 +11,7 @@ const TodoForm = ({setTodo}) =>
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        createTodo(inputTodo)
+        TodoApi.createTodo(inputTodo)
             .then((todo)=>{
                 setTodo(todo);
             });

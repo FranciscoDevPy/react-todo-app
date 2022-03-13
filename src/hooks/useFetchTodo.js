@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getTodo } from "../helpers/todoApi";
+import TodoApi from "../helpers/todoApi";
 
 const useFetchTodo = (todo) => 
 {
@@ -8,7 +8,7 @@ const useFetchTodo = (todo) =>
     });
 
     useEffect(()=>{
-        getTodo()
+        TodoApi.getTodo()
             .then( data => {
                 setState({
                     data
