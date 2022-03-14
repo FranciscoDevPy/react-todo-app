@@ -42,7 +42,7 @@ const TodoTable = ( {todo, setTodo, setTodoTotal} ) =>
                             <td>{value.todo}</td>
                             <td>
                                 <button 
-                                    title='Eliminar tarea'
+                                    title='Delete Todo'
                                     className="oculto animate__animated btn-delete txt-white" 
                                     onClick={()=>{handleSubmit(value.id)}} 
                                 >

@@ -38,6 +38,7 @@ const TodoForm = ({setTodo}) =>
                     </div>
                     <div className="col-2 ps-0">
                         <button 
+                            title="Add new Todo"
                             className="btn btn-add bg-lila txt-white" > 
                             <i className="fa-solid fa-plus"></i>
                         </button>

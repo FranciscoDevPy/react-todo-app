@@ -33,7 +33,10 @@ function App()
                         {/* CARD FOOTER - INFO TODO */}
                         <div className="card-footer bg-white d-flex justify-content-between align-items-center">
                             <p className="m-0" >You have {todoTotal} pending tasks</p> 
-                            <button className="btn bg-lila txt-white" onClick={handleSubmit} > Clear all</button>
+                            <button 
+                                title='Delete all Todo'
+                                className="btn bg-lila txt-white" 
+                                onClick={handleSubmit} > Clear all</button>
                         </div>
                         {/* / CARD FOOTER - INFO TODO  */}
                     </div>
