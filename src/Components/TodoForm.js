@@ -13,6 +13,11 @@ const TodoForm = ({setTodo}) =>
         e.preventDefault();
         TodoApi.createTodo(inputTodo)
             .then((todo)=>{
+                if( todo.errors && todo.errors[0].msg )
+                {
+                    alert(todo.errors[0].msg);
+                    return;
+                }
                 setTodo(todo);
             });
         setInputTodo('');
