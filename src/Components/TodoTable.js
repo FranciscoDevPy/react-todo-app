@@ -19,13 +19,13 @@ const TodoTable = ( {todo, setTodo, setTodoTotal} ) =>
 
     const handleShowBtnDelete = (e)=>{
         const btnDelete = e.currentTarget.children[1].children[0];
-        btnDelete.classList.remove('oculto');
+        btnDelete.classList.remove('d-sm-none');
         btnDelete.classList.add('animate__fadeIn');
     }
 
     const handleHideBtnDelete = (e)=>{
         const btnDelete = e.currentTarget.children[1].children[0];
-        btnDelete.classList.add('oculto');
+        btnDelete.classList.add('d-sm-none');
         btnDelete.classList.remove('animate__fadeIn');
     }
 
@@ -43,7 +43,7 @@ const TodoTable = ( {todo, setTodo, setTodoTotal} ) =>
                             <td>
                                 <button 
                                     title='Delete Todo'
-                                    className="oculto animate__animated btn-delete txt-white" 
+                                    className="d-block d-sm-none animate__animated btn-delete txt-white" 
                                     onClick={()=>{handleSubmit(value.id)}} 
                                 >
                                     <i className="fa-solid fa-trash"></i>
