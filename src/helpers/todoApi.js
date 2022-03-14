@@ -6,7 +6,7 @@ class TodoApi {
         const host      = process.env.REACT_APP_API_URL_HOST_TODO_APP;
         const url       = host+'/api/todo';
         const headers   = { "content-type": "application/json"};
-        const resp      = await fetch(url, {method: 'GET', headers});
+        const resp      = await fetch(url, {method: 'GET', headers, mode: 'cors'});
         const {data}    = await resp.json(); 
         return data;
     }
@@ -22,7 +22,7 @@ class TodoApi {
         const host      = process.env.REACT_APP_API_URL_HOST_TODO_APP;
         const url       = host+'/api/todo';
         const headers   = { "content-type": "application/json"};
-        const resp      = await fetch(url, {method: 'POST', headers, body});
+        const resp      = await fetch(url, {method: 'POST', headers, body, mode: 'cors'});
         const todo      = await resp.json(); 
         return todo;
     }
@@ -37,7 +37,7 @@ class TodoApi {
         const host      = process.env.REACT_APP_API_URL_HOST_TODO_APP;
         const url       = host+'/api/todo/'+id;
         const headers   = {"content-type": "application/json"};
-        const resp      = await fetch(url, {method: 'DELETE', headers});
+        const resp      = await fetch(url, {method: 'DELETE', headers, mode: 'cors'});
         const todo      = await resp.json(); 
         return todo;
     }
@@ -51,7 +51,7 @@ class TodoApi {
         const host      = process.env.REACT_APP_API_URL_HOST_TODO_APP;
         const url       = host+'/api/todo';
         const headers   = { "content-type": "application/json"};
-        const resp      = await fetch(url, {method: 'DELETE', headers});
+        const resp      = await fetch(url, {method: 'DELETE', headers, mode: 'cors'});
         const todo      = await resp.json(); 
         return todo;
     }
